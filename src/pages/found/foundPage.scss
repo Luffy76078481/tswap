@@ -1,0 +1,11 @@
+.foundPage{
+    height: 100%;
+    .pageContent{
+        width: 100%;
+        height: calc(100% - 2rem);
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

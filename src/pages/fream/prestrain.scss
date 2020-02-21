@@ -1,0 +1,16 @@
+// 为了更好的体验，预加载一些重要图片
+body:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url("../../pagesFade/loginRegist/images/football2.mp4") no-repeat -10000px -1000px,url($LoginBG1) no-repeat -10000px -1000px;
+    width: 0;
+    height: 0
+}
+
+
+//解决ios底层div跟着滑动的问题
+.FreamPage{
+    position: fixed;
+    width: 100%;
+}

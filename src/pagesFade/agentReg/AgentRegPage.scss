@@ -1,0 +1,124 @@
+.agentRegisterPage {
+    width: 100%;
+    height: 100%;
+    background: $body;
+    ::placeholder{
+        color: $PlaceHoder;
+    }
+    ::-webkit-input-placeholder{
+        color: $PlaceHoder !important;
+    }
+    .scroll-content{
+        // padding: 0 .3rem;
+        overflow: auto;
+        height: calc(100% - 1rem);
+
+        .jointImg{
+            width: 90%;
+            margin: 1rem auto;
+            height: 2.5rem;
+            background: url('./Images/joint.png') no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .am-list-body {
+        position: static;
+        background: $MpageBG;
+
+        .inputBox {
+            padding-left: .3rem;
+                height: .9rem;
+                line-height: .9rem;
+            input {
+                border: 0;
+                background: transparent;
+                color: $text2;
+            }
+        }
+    }
+    .am-list-item {
+        height: .9rem;
+        padding-left: .3rem;
+        position: static;
+
+        .am-list-line {
+            position: static;
+            border-bottom: 1px solid $border-bottom !important;
+
+            .am-list-extra {
+                font-size: .26rem;
+                color: $PlaceHoder;
+            }
+
+            .am-list-arrow {
+                width: .25rem;
+                height: .25rem;
+                margin-left: .16rem;
+                opacity: $opacity;
+            }
+
+        }
+    }
+
+    .am-list-item .am-list-line .am-list-content {
+        font-size: .26rem;
+        color: $PlaceHoder;
+    }
+
+    input {
+        font-size: .35rem
+    }
+
+    .icon {
+        width: .5rem;
+        font-size: .35rem;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+
+    .am-list-item .am-input-label.am-input-label-5 {
+        width: .5rem;
+    }
+
+    .am-list-item .am-input-control input {
+        font-size: .35rem;
+        color: $text2;
+    }
+    .am-list-item.am-input-error .am-input-control input{
+        color: #f50;
+    }
+
+    .am-input-clear {
+        width: .4rem;
+        height: .4rem;
+        background-size: .4rem auto;
+        background-position: .04rem .05rem;
+    }
+}
+
+.am-picker-popup-item {
+    font-size: .25rem !important;
+    padding: .2rem .3rem !important;
+    height: .75rem !important;
+}
+
+.am-picker>.am-picker-col {
+    height: 5rem;
+
+    .am-picker-col-indicator {
+        height: 1rem;
+    }
+
+    .am-picker-col-item {
+        height: 1rem;
+        line-height: 1rem;
+        font-size: .25rem;
+    }
+}
+
+.am-picker-col-indicator {
+    border-top: 1PX solid #ccc !important;
+    border-bottom: 1PX solid #ccc !important;
+}

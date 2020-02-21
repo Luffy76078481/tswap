@@ -1,0 +1,135 @@
+
+
+.turntable{
+    overflow: scroll;
+    z-index: 2;
+    background-color:#efefef ;
+    .turnTableWrap{
+        position: absolute;
+        height: calc(100% - 1rem);
+        width: 100%;
+        overflow-y: scroll;
+        left: 0;
+    }
+    .contents{ // 内容
+        background: #A31416 url(./images/bg01.jpg) no-repeat;
+        background-size: 100% auto;
+        padding: 3.75rem 0 .3rem 0;
+        margin-top: -1rem;
+        width: 100%;
+        position: relative;
+        .dzp{ // 转盘容器
+            margin: 0 auto 0.5rem;
+            width: 6.875rem;
+            height: 6.875rem;
+            position: relative;
+            background: url(./images/turntablebg.png) no-repeat;
+            background-size: 100% 100%;
+            .prize{ // 奖品
+                width: 6.375rem;
+                height: 6.375rem;
+                position: absolute;
+                left: 0.25rem;
+                top: 0.25rem;
+                background: url(./images/turntable.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            button{
+                display: block;
+                width: 3.75rem;
+                height: 5rem;
+                position: absolute;
+                left: 1.55rem;
+                top: 0.1rem;
+                background: url(./images/playbtn.png) no-repeat;
+                background-size: 100% auto;            
+            }
+        }
+        // 获奖名单
+        .prizeList{
+            height: 1rem;
+            background: url(./images/bg02.png) no-repeat center;
+            background-size: 100%;
+            padding: .15rem 0;
+            box-sizing: border-box;
+            .list-bg{
+                overflow: hidden;
+                position: relative;
+                height: .7rem;
+                ul.awardsCot{
+                    //animation: marqueeTop 30s linear infinite;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    padding: 0 .8rem 0 1.1rem;
+                    box-sizing: border-box;
+                    li{
+                        text-align: center;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: normal;
+                        height: .4rem;
+                        span{
+                            line-height: .3rem;
+                            font-size: .24rem;
+                            color: #fff;                        
+                            &.colors{
+                                color: #fff000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 规则
+        ul.infos{
+            margin: .4rem .3rem;
+            li{
+                width: 3.3rem;
+                float: left;
+                height: .85rem;
+                &.setting{
+                    background: url(./images/navi01.png) no-repeat center/ 100% auto;
+                    float: left;
+                    &.active{
+                        background: url(./images/navi01_on.png) no-repeat center/ 100% auto;
+                    }
+                }
+                &.role{
+                    background: url(./images/navi03.png) no-repeat center/ 100% auto; 
+                    float: right;
+                    &.active{
+                        background: url(./images/navi03_on.png) no-repeat center/ 100% auto; 
+                    }              
+                }
+            }
+        }
+        .activtyCot{
+            padding: 0 .4rem;
+            margin-bottom: 1rem;
+            // height: 5rem;
+            // // overflow-y: scroll;
+            // // position: relative;
+            // // z-index: 2;
+            p{
+                color: #ffefa4;
+                font-size: .25rem;
+                line-height: .35rem;
+            }
+        }
+        .footer{
+            overflow: hidden;
+            background: #841011;
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            p{
+                color: #ffd200;
+                font-size: 0.25rem;
+                line-height: 0.6rem;
+                text-align: center;
+            }
+        }
+    }
+}

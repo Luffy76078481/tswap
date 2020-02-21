@@ -1,0 +1,230 @@
+.RegisterPage{
+    height: 100%;
+    width: 100%;
+    background: url($LoginBG) 0 0/100% 100% no-repeat;
+    .loginBox{
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        padding: 0 10%;
+        overflow: auto;
+        .titleEde{
+            width: 100%;
+            margin: 1rem 0 .48rem;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            &>div{
+                background-size: cover;
+                width: 1.8rem;
+                height: 2.1rem;
+                border-radius: .213333rem;
+                
+            }
+            &>div:nth-of-type(1){
+                background:  url("../login/images/titleEde1.png") 0 0/100% 100% no-repeat hsla(0,0%,100%,.6);;
+            }
+            &>div:nth-of-type(2){
+                background:  url("../login/images/titleEde2.png") 0 0/100% 100% no-repeat hsla(0,0%,100%,.6);;
+            }
+            &>div:nth-of-type(3){
+                background:  url("../login/images/titleEde3.png") 0 0/100% 100% no-repeat hsla(0,0%,100%,.6);;
+            }
+            &>.imgBoxUsd{
+                width: 100%;
+                background:  url("../login/images/titleEdeUsd.png") 0 0/100% 100% no-repeat  !important;
+            }
+        }
+        .regBtn{
+            width: 58%;
+            height: .9rem;
+            line-height: .9rem;
+            font-size: .38rem;
+            color: #fff;
+            letter-spacing: .048rem;
+            text-align: center;
+            margin:.2rem auto;
+            opacity: .88;
+            background-image: $LoginBtnBG;
+            border-radius: .6rem;
+        }
+        .loginCont{
+            display: flex;
+            height: 9rem;
+            justify-content: space-between;
+            .loginLeft{
+                overflow: auto;
+                width: calc(100% - 1rem);
+                color: #fff;
+                background: rgba(77,77,77,.5);
+                border-top-right-radius: .346667rem;
+                border-bottom-right-radius: .346667rem;
+                .leftCont{
+                   
+                    padding: .6rem .3rem;
+                    height: 83%;
+                    &>p{
+                        color: #333;
+                        font-size: .44rem;
+                        margin-bottom: 1rem;
+                        text-align: center;
+                    }
+                    .inputBox{
+                        position: relative;
+                        .conslo{
+                            color: #fff;
+                            margin-top: .18rem;
+                            /* display: none; */
+                            background-size: contain;
+                            height: .4rem;
+                            padding-left: .48rem;
+                            font-size: .293333rem;
+                            position: relative;
+                        }
+                        .AuthCode{
+                            position: absolute;
+                            width: 34%;
+                            height: .7rem;
+                            right: .4rem;
+                            top: .27rem;
+                        }
+                        .WithdrawalPassword{
+                            // letter-spacing: .2rem;
+                        }
+                        .icon1{
+                            position: absolute;
+                            left: .346667rem;
+                            top: .44rem;
+                            width: .48rem;
+                            height: .48rem;
+                            font-size: .4rem;
+                            z-index: 1;
+                            color: #333;
+                        }
+                        .icon2{
+                            font-size: .4rem;
+                            color: #fff;
+                            vertical-align: sub;
+                            margin-right: .1rem;
+                            margin-left: -.3rem;
+                        }
+                        .iconFont{
+                            font-size: .2rem
+                        }
+                        i{
+                            color: #333;
+                            display: block;
+                            position: absolute;
+                            bottom: .5rem;
+                            left: 1.066667rem;
+                            z-index: 1;
+                            font-weight: 400;
+                            font-style: normal;
+                        }
+                        input{
+                            width: 75%;
+                            height: .85rem;
+                            margin-top: .2rem;
+                            opacity: .6;
+                            background: #fff;
+                            border-radius: .7rem;
+                            font-family: PingFangSC-Regular;
+                            padding-left: 1.013333rem;
+                            color: #333;
+                            outline: none;
+                            border: none;
+                            font-size: .26rem;
+                        }
+                    
+                    }
+                    .swichBox{
+                        width: 100%;
+                        height: .8rem;
+                        margin-top: .133333rem;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                        font-size: .4rem;
+                        &>span{
+                            display: -ms-flexbox;
+                            display: flex;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            color: #333;
+                            border-radius: .213333rem;
+                            .check{
+                                display: block;
+                                width: .36rem;
+                                font-size: .32rem;
+                                padding-left: .1rem
+                            }
+                            .checkFont{
+                                font-size: .28rem;
+                                padding-left: .1rem;
+                            }
+                        }
+                    }
+                    
+                    .goBack{
+                        color: #333;
+                        text-align: center;
+                        margin-top: .333333rem;
+                        font-size: .326667rem;
+                    }
+                    
+                }
+            }
+            .loginRight{
+                width: 1rem;
+                background: hsla(0,0%,100%,.8);
+                border-top-left-radius: .346667rem;
+                border-bottom-left-radius: .346667rem;
+                font-size: .48rem;
+                text-align: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                display: flex;
+                .rightBox{
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    .icon-xinyonghu1{
+                        font-size: .38rem;
+                    }
+                    .rightBoxFont{
+                        margin-top: .12rem;
+                        width: .533333rem;
+                        font-size: .35rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.am-list-item{
+    background: none!important;
+    .am-list-content{
+        color: #fff;
+        white-space: pre-wrap;
+        font-size: .26rem;
+    }
+}
+.am-list-item-active{
+    background: none!important;
+}
+
+.am-checkbox.am-checkbox-checked .am-checkbox-inner {
+    border-color: $boxBG;
+    background: $boxBG;
+}

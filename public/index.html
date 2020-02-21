@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1353364_moqw081fm.css">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>React App</title>
+  <style type="text/css">
+    /* 初始化样式 */
+    body,
+    ol,
+    ul,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    th,
+    td,
+    dl,
+    dd,
+    form,
+    fieldset,
+    legend,
+    input,
+    textarea,
+    select {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      width: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-overflow-scrolling: touch;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    button {
+      outline: none;
+      border: none;
+    }
+
+    em {
+      font-style: normal
+    }
+
+    li {
+      list-style: none
+    }
+
+    img {
+      border: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+
+    p {
+      word-wrap: break-word
+    }
+
+    iframe {
+      border: none
+    }
+
+    #root {
+      font-size: .36rem;
+      height: 100%;
+    }
+
+    ::-webkit-input-placeholder {
+      /* WebKit browsers */
+      font-size: .25rem;
+      color: #888;
+    }
+
+    :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      font-size: .25rem;
+      color: #888;
+    }
+
+    ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      font-size: .25rem;
+      color: #888;
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      font-size: .25rem;
+      color: #888;
+    }
+
+    .clearfix::after {
+      content: " ";
+      clear: both;
+      display: table;
+      width: 0;
+    }
+
+    a {
+      text-decoration: none;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      -webkit-user-select: none;
+      -moz-user-focus: none;
+      -moz-user-select: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
+      background: none;
+      text-decoration: none;
+      color: black;
+    }
+
+    .loadBox {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.168);
+      z-index: 100000;
+    }
+
+    .loader {
+      background: url("%PUBLIC_URL%/loading.png") no-repeat 0 0/100% 100%;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      animation: spinner 2s linear infinite;
+    }
+
+    @keyframes spinner {
+      50% {
+        transform: rotate(360deg);
+      }
+
+      100% {
+        transform: rotate(720deg);
+      }
+    }
+
+    .skeleton {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+    }
+
+    .skeTop,
+    .skeCent,
+    .skeCont,
+    .skeBott {
+      width: 90%;
+      margin: 20px auto;
+      background: #c4c4c4;
+    }
+
+    .skeTop {
+      height: 28vh;
+    }
+
+    .skeCent {
+      height: 8vh;
+    }
+
+    .skeCont {
+      height: 46vh;
+    }
+
+    .skeBott {
+      height: 6vh;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <div class="loadBox">
+      <div class="loader"></div>
+    </div>
+    <div class="skeleton">
+      <div class="skeTop"></div>
+      <div class="skeCent"></div>
+      <div class="skeCont"></div>
+      <div class="skeBott"></div>
+    </div>
+  </div>
+</body>
+<script>
+  (function () {
+    function resizeBaseFontSize() {
+      var rootHtml = document.documentElement,
+        deviceWidth = rootHtml.clientWidth;
+      rootHtml.style.fontSize = deviceWidth / 7.5 + "px";
+      window.fontSize = deviceWidth / 7.5;
+    }
+    resizeBaseFontSize();
+    window.addEventListener("resize", resizeBaseFontSize, false);
+    window.addEventListener("orientationchange", resizeBaseFontSize, false);
+  })();
+  window.fuck = function () {
+    var calendar = new datePicker();
+    calendar.init({
+      'trigger': '#demo1', /*按钮选择器，用于触发弹出插件*/
+      'type': 'date',/*模式：date日期；datetime日期时间；time时间；ym年月；*/
+      'minDate': '1900-1-1',/*最小日期*/
+      'maxDate': '2100-12-31',/*最大日期*/
+      'onSubmit': function () {/*确认时触发事件*/
+        var theSelectData = calendar.value;
+      },
+      'onClose': function () {/*取消时触发事件*/
+      }
+    });
+  }
+
+  //格式化日期
+  Date.prototype.format = function (fmt) { //author: meizz
+    var o = {
+      "M+": this.getMonth() + 1, //月份
+      "d+": this.getDate(), //日
+      "h+": this.getHours(), //小时
+      "m+": this.getMinutes(), //分
+      "s+": this.getSeconds(), //秒
+      "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+      "S": this.getMilliseconds() //毫秒
+    };
+    if (/(y+)/.test(fmt))
+      fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+      if (new RegExp("(" + k + ")").test(fmt))
+        fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[
+          k]).length)));
+    return fmt;
+  }
+
+
+  //如果是app端的话windowopen的打开方式
+  if (window.plus) {
+    console.log(window.plus)
+    plusReady();
+  } else {
+    // 所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。
+    document.addEventListener("plusready", plusReady, false);
+  }
+
+  function plusReady() {
+    // 解决打包app后无法调用物理返回键
+    var plus = window.plus;
+    var __currentVersion;
+    var webview = plus.webview.currentWebview();
+    plus.key.addEventListener('backbutton', function () {
+      // webview.canBack(function (e) {
+      //     if (e.canBack) {
+      //         webview.back();
+      //     } else {
+      //         // webview.close(); //hide,quit
+      //         //plus.runtime.quit();
+      //     }
+      // })
+      window.wapHistoryType.go(-1);
+    }, false);
+  }
+
+
+</script>
+
+</html>

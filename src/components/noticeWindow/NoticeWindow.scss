@@ -1,0 +1,75 @@
+.NoticeWindow{
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.515);
+    z-index: 1001;
+    .noticeBox{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 5.6rem;
+        height: 8.8rem;
+        display: flex;
+        color: #4f4535;
+        flex-direction: column;
+        border-radius: 8px;
+        overflow: hidden;
+        .noticeTop{
+            width: 100%;
+            height: 8rem;
+            background: $noticeBG;
+            border-radius: .266667rem;
+            .noticeTitle{
+                margin: .1rem 0;
+                background-image: linear-gradient(#fffdfc, #e0d5cd, #cab2a0);
+                -webkit-background-clip:text; 
+                -webkit-text-fill-color:transparent; 
+                font-size: .5rem;
+                font-weight: bold;
+                text-align: center;
+            }
+            .noticeContent{
+                width:95%;
+                height: 6.7rem;
+                background: $noticeContentBG;
+                margin: auto;
+                border-radius: 12px;
+                .slider-frame {
+                    a{
+                        color: $text;
+                    }
+                    li {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .am-carousel{
+                height: 100%!important;
+                .slider-frame{
+                    height: 100%!important;
+                }
+            }
+        }
+        .noticeClose{
+            width: .8rem;
+            height: .8rem;
+            background: $gradientBG;
+            text-align: center;
+            line-height: .75rem;
+            border-radius: 100%;
+            margin: .2rem auto;
+            .icon-iconclose{
+                font-size: .28rem;
+                color: #fff;
+            }
+        }
+    }
+}

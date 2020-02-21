@@ -1,0 +1,47 @@
+.Carousel {
+    height: 2.9rem;
+    margin:0 0 .2rem 0 ;
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .swiper-slide {
+        overflow: hidden;
+        text-align: center;
+        background: #fff;
+
+        -webkit-transition: transform .2s;
+        -moz-transition: transform .2s;
+        -ms-transition: transform .2s;
+        -o-transition: transform .2s;
+        width: 95% !important;
+        margin: 0 2.5%;
+        //width: 5rem!important;
+
+    }
+ 
+    .swiper-pagination-bullets{
+        position: static;
+        line-height: .1rem;
+        .swiper-pagination-bullet{
+            width: .4rem;
+            height: .06rem;
+            margin-right: .1rem;
+            border-radius: 0;
+            background: #000;
+        }
+    }
+    .swiper-pagination-bullet-active{
+        width: .9rem !important;
+        background: $testBG !important;
+    }
+    .img{
+        width: 100%;
+        height: 100%;
+        background: red;
+        transform:scale(1.0,1.0);
+    }
+
+}

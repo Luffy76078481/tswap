@@ -1,0 +1,33 @@
+.HistoryPage{
+    background-color: $MoneyPage;
+    .pageContent{
+        .record{
+            width: 95%;
+            margin: .2rem auto;
+            border-radius: 10px;
+            background: $MpageBG;
+            .listItem{
+                height: 1rem;
+                padding-left: .4rem;
+                .listSpan{
+                    padding-left: .5rem;
+                    color: $text1;
+                    font-size: .3rem;
+                }
+                .am-list-arrow {
+                    opacity: $opacity;
+                }         
+            }
+        }
+        .prompt{
+            margin-top: .5rem;
+            padding: .2rem;
+            .warning{
+                color: $warning;
+                width: 100%;
+                text-align: center;
+                font-size: .28rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,192 @@
+.Recommend{
+    background: $root !important;
+    height: 100%;
+    .scroll-content {
+        overflow: auto;
+        height: calc(100% - 1rem);
+        .recommendInfo{
+            margin: .3rem auto;
+            display: flex;
+            justify-content: space-around;
+            .recomendInfoBox{
+                width: 45%;
+                height: 1.5rem;
+                background: $contentBG;
+                color: $text1;
+                display: flex;
+                justify-content: space-around;
+                border-radius: 10px;
+                div{
+                    span{
+                        display: block;
+                    }
+                    &:first-child{
+                        line-height: 2rem;
+                        .icon{
+                            color: $testBG;
+                            font-size: .5rem;
+                        }
+                    }
+
+                    &:last-child{
+                        .recomendTitle{
+                            margin-top: .25rem;
+                            font-size: .25rem;
+                        }
+                        .recomendData{
+                            text-align: center;
+                            margin-top: .2rem;
+                            font-size: .5rem;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        // 时间区间
+        .timeBtn {
+            background: $contentBG;
+            margin-left: .55rem;
+            font-size: .25rem;
+            display: inline-block;
+            border-radius: 5px;
+            color: $text1;
+            flex-basis: 80%;
+            width: 85%;
+            span.title{
+                padding-left: .2rem;
+            }
+            span.date{
+                color: $text2;
+                padding-left: .5rem;
+                line-height: .7rem;
+                display: inline-block;
+            }
+            svg{
+                color: #fff;
+                vertical-align: middle;
+                margin-left: .4rem;
+                margin-top: -.1rem;
+            }
+        }
+
+        // 查询按钮
+        .queryBtn{
+            background: $contentBG;
+            color: $text1;
+            border-radius: 5px;
+            margin: .15rem auto;
+            width: 85%;
+            height: .6rem;
+            line-height: .6rem;
+            text-align: center;
+            cursor: pointer;
+            font-size: .3rem;
+        }
+        
+        // 推荐会员信息
+        .table{
+            width: 95%;
+            margin: .5rem auto;
+            // border: 1px solid $border-bottom;
+            table{
+                width: 100%;
+                table-layout: fixed;
+                th{
+                    width: 25%;
+                    font-size: .3rem;
+                    color: $text1;
+                    padding: .1rem 0;
+                }
+                tr{
+                    border: 1px solid $border;
+                }
+                td{
+                    text-align: center;
+                    padding: .1rem 0;
+                    font-size: .25rem;
+                    color: $text1;
+                    width: 25%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: normal;
+                }
+            }
+            .am-pagination{
+                margin-top: .1rem;
+                .am-flexbox{
+                    height: .5rem;
+                    .am-pagination-wrap{
+                        color: $text2;
+                        .active{
+                            color: $text2;
+                        }
+                    }
+                    .am-button{
+                        background: $contentBG;
+                        color: $text1;
+                        &::before{
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 日历插件
+        .timeChoose{
+            z-index: 999;
+            position: absolute;
+            -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            .mask{
+                position: relative;
+                height: 100%;
+                width: 100%;
+                background: rgba(0,0,0,.5);
+            }
+        }
+        .timeCon{
+            position: absolute;
+            bottom: -1px;
+            background: #fff;
+            width: 100%;    
+        }
+        .timeConBtn{
+            height: .7rem;
+            line-height: .7rem;
+            color: $boxBG;
+            a{
+                font-size: .3rem;
+            }
+            padding: 0 .1rem;
+                .left{float: left;}
+                .right{float: right;}
+        }
+        .sub-title{
+            text-align: center;
+            background: #eee;
+            line-height: .7rem;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            font-size: .3rem;
+        }
+        .am-picker>.am-picker-col {
+            height: 2.1rem;
+            .am-picker-col-indicator{
+                height: .7rem;
+            }
+            .am-picker-col-item{
+                height: .7rem;
+                line-height: .7rem;
+                font-size: .25rem;
+            }
+        }
+    }
+}

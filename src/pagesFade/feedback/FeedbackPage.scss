@@ -1,0 +1,72 @@
+.feedbackPage {
+    width: 100%;
+    height: 100%;
+    background: $body;
+    height: calc(100% - 1rem);
+    ::-webkit-input-placeholder{
+        color: $PlaceHoder !important;
+    }
+    .scroll-content{
+        padding: 0 .3rem;
+        overflow: auto;
+        height: calc(100% - 1rem);
+        .selectTex {
+            display: flex;
+            padding-left: 15px;
+            line-height: 1rem;
+            font-size: .35rem;
+            font-weight: 500;
+            color:$text;
+        }
+    }
+    .btn {
+        height: .9rem;
+        font-size: .3rem;
+        color: #fff;
+        background-color:$boxBG !important;
+        margin: 0.2rem auto;
+        width: 85%;
+        text-align: center;
+        line-height: .9rem;
+        display: block;
+        border: none;
+        border-radius: 10px;
+        &:disabled{
+            background-color: #dcdcdc;
+        }
+    }
+    .am-textarea-count{
+        font-size: .25rem !important;
+        color: $PlaceHoder;
+        span{
+            color: $PlaceHoder;
+        }
+    }
+    .am-textarea-control textarea{
+        color: $text;
+        font-size: .4rem;
+        line-height: .5rem;
+    }
+}
+.Feedback {
+ div:nth-child(1) {
+    & .am-list-item {
+        margin-top: .5rem;
+        border-radius: 5px;
+        box-shadow: $box-shadow;
+        background: $MpageBG !important;
+       & .am-list-line {
+          justify-content: space-between !important;
+          & .am-list-extra {
+              text-align: left !important;
+              color: $text1;
+          }
+        }
+    }
+}
+.am-textarea-item {
+    margin-top: .4rem;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+}
+}

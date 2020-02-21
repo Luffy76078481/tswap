@@ -1,0 +1,217 @@
+.MyPage {
+
+    div,a,p,span {
+
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -khtml-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+
+    .content-container {
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 1.9rem);
+        overflow: auto;
+
+        .second__25kyk {
+            width: 100%;
+            height: 100%;
+            -ms-flex: 1 1;
+            flex: 1 1;
+            position: relative;
+            margin-bottom: -.026667rem;
+
+            >a {
+                display: block;
+            }
+
+            .myAcount {
+                display: block;
+                margin-top: -.75rem;
+
+                .listItem {
+                    border-top-left-radius: 18px;
+                    border-top-right-radius: 18px;
+                }
+            }
+
+            .my-index__3XjEX {
+                height: 2.5rem;
+                background: $Navbar;
+                background-size: 100% 100%;
+                width: 100%;
+                display: -ms-flexbox;
+                display: flex;
+
+                .my-info-wrap__1dve9 {
+                    width: 25%;
+
+                    img {
+                        height: 1.386667rem;
+                        margin: .1rem 0 0 .4rem;
+                    }
+
+                }
+
+                .my-info-wrap1__3Ty9P {
+                    width: 75%;
+                    color: #fff;
+                    position: relative;
+
+                    .user__1iZuy {
+                        display: flex;
+                        align-items: center;
+                        margin-top: .4rem;
+                        font-size: .4rem;
+                    }
+
+                    .user__1iZuy1 {
+                        display: flex;
+                        align-items: center;
+                        margin-top: .1rem;
+                        font-size: .28rem;
+                    }
+
+                    .more__1iKno {
+                        position: absolute;
+                        width: 1.786667rem;
+                        height: .746667rem;
+                        line-height: .746667rem;
+                        background: $messageBG;
+                        border-radius: .133333rem;
+                        right: .586667rem;
+                        top: .4rem;
+                        font-size: .32rem;
+                        color: $message;
+                        text-align: center;
+
+                        &>a {
+                            color: $message;
+                        }
+                    }
+                }
+            }
+
+            .spclistItem {
+                margin-bottom: .4rem;
+                border: none !important;
+            }
+
+            .listItem {
+                height: .8rem;
+                padding-left: .4rem;
+                background: $MpageBG !important;
+                min-height: .8rem;
+
+                .am-list-content {
+                    color: $myPageSizeColor !important;
+                }
+            }
+
+            .palace__1MM09 {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                background: $MpageBG;
+                display: flex;
+                padding: .3rem 0;
+                margin-bottom: .3rem;
+
+                .grid__3Xa5w {
+                    flex-grow: 1;
+                    text-align: center;
+
+                    &>p {
+                        font-size: .25rem;
+                        font-size: .27rem;
+                        color: $myPageSizeColor;
+
+                        a {
+                            color: $myPageSizeColor;
+                        }
+                    }
+
+                    &>span {
+                        font-size: .5rem;
+                    }
+                }
+            }
+
+            .am-list-content {
+                display: flex;
+                align-items: center;
+            }
+            .listIcon {
+                font-size: .4rem;
+                margin-right: .3rem;
+            }
+
+            .listSpan {
+                font-size: .3rem;
+
+            }
+
+            .count {
+                width: .4rem;
+                height: .4rem;
+                line-height: .4rem;
+                border-radius: 50%;
+                margin-left: .5rem;
+                display: inline-block;
+                background: #ff9900;
+                color: #fbff68;
+                text-align: center;
+
+            }
+
+            .exit__VoeN {
+                margin-top: .4rem;
+                margin-bottom: .1rem;
+                border-bottom:1px solid $border-bottom;
+                width: 100%;
+                line-height: .8rem;
+                background: $MpageBG;
+                font-size: .38rem;
+                color: $myPageSizeColor;
+                text-align: center;
+            }
+
+        }
+
+    }
+
+    // ANTD改自适应
+    .am-list-line {
+        padding-right: .3rem;
+        border-bottom: 1px solid $border-bottom !important;
+        &::after{
+            width: 0 !important;
+            
+        }
+
+        .am-list-content {
+            padding-top: .12rem;
+            padding-bottom: .12rem;
+            font-size: .26rem;
+        }
+
+        .am-list-arrow {
+            opacity: $opacity;
+        }
+
+        .am-list-extra {
+            color: $myPageSizeColor;
+            font-size: .3rem;
+        }
+    }
+
+    // 图标判断
+
+}

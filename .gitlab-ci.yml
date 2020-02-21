@@ -1,0 +1,159 @@
+stages:
+  - build
+  # - cleanup_build
+  - deploy
+  - production
+  - superWap
+  - superPc
+  # - cleanup
+cache:
+  key: ${CI_COMMIT_REF_NAME}
+  paths:
+  - node_modules/
+  - dist2/
+  - distWap/
+deploy:
+  stage: deploy
+  script:
+    - npm install
+    - echo "build完成！"
+    - echo "发布中！（手动执行）"
+    - if [[ "$CI_COMMIT_MESSAGE" =~ "@T-cgtest02-wap" ]]; then
+      echo 'Yabo通用版测试WAP端更新中...';
+      runOrder="build_wap";
+      localFileName="build/*"
+      devFileName="cgtest02-pc/m";
+      sendPath="cgtest02-pc";
+
+      elif [[ "$CI_COMMIT_MESSAGE" =~ "@T-cgtest02-app" ]]; then
+      echo 'Yabo通用版测试APP端更新中...';
+      runOrder="build_app";
+      localFileName="build/*"
+      devFileName="cgtest02-app";
+      sendPath="cgtest02-app";
+
+      elif [[ "$CI_COMMIT_MESSAGE" =~ "@T-usd-wap" ]]; then
+      echo 'usd_wap';
+      runOrder="build_wap";
+      localFileName="build/*"
+      devFileName="usd-pc/m";
+      sendPath="usd-pc";
+
+      elif [[ "$CI_COMMIT_MESSAGE" =~ "@T-usd-app" ]]; then
+      echo 'usd_app';
+      runOrder="build_app";
+      localFileName="build/*"
+      devFileName="usd-app";
+      sendPath="usd-app";
+
+      elif [[ "$CI_COMMIT_MESSAGE" =~ "@T-988-wap" ]]; then
+      echo '988红色主题YABO通用版本...';
+      runOrder="build_wap";
+      localFileName="build/*"
+      devFileName="988-pc/m";
+      sendPath="988-pc";
+
+      elif [[ "$CI_COMMIT_MESSAGE" =~ "@T-988-app" ]]; then
+      echo '988红色主题YABO通用版本...';
+      runOrder="build_app";
+      localFileName="build/*"
+      devFileName="988-app";
+      sendPath="988-app";
+      
+      else
+      echo "配置错误";
+      return;
+      fi;
+
+    - rm -rf $localFileName
+    - npm run $runOrder
+    # 拷贝打包好的文件到同步目录  $devFileName对应皮的名字
+    - rm -rf /sync/$devFileName
+    - mkdir -p /sync/$devFileName
+    - cp -r $localFileName /sync/$devFileName
+    - echo "同步目录创建完成！"
+    - rsync -auv --password-file=/etc/rsyncd.passwd  /sync/$sendPath   rsyncuser@10.111.108.170::helloRsync 
+
+    - echo "发布成功。自己检查一下，然后域名发群里，通知客服测试！";
+  allow_failure: false
+  only:
+    variables:
+    - $CI_COMMIT_MESSAGE =~ /@T/
+    # variables:
+    # - $CI_COMMIT_MESSAGE != "commPush"
+  # # when: manual
+
+
+
+
+
+production:
+  stage: production
+  script:
+    - npm install
+    - echo "build完成！"
+    - echo "发布中！（手动执行）"
+
+
+    - if [[ "$CI_COMMIT_MESSAGE" =~ "@P-988-wap" ]]; then
+      echo '988-wap';
+      runOrder="build_wap";
+      localFileName="build/*"
+      devFileName="988-pc/m";
+      sendPath="988-pc";
+      elif [[ "$CI_COMMIT_MESSAGE" =~ "@P-988-app" ]]; then
+      echo '988-app';
+      runOrder="build_app";
+      localFileName="build/*"
+      devFileName="988-app";
+      sendPath="988-app";
+
+      elif [[ "$CI_COMMIT_MESSAGE" =~ "@P-usd-wap" ]]; then
+      echo 'usd-wap';
+      runOrder="build_wap";
+      localFileName="build/*"
+      devFileName="usd-pc/m";
+      sendPath="usd-pc";
+      elif [[ "$CI_COMMIT_MESSAGE" =~ "@P-usd-app" ]]; then
+      echo 'usd-app';
+      runOrder="build_app";
+      localFileName="build/*"
+      devFileName="usd-app";
+      sendPath="usd-app";
+
+      elif [[ "$CI_COMMIT_MESSAGE" =~ "@P-j98-wap" ]]; then
+      echo 'j98-wap';
+      runOrder="build_wap";
+      localFileName="build/*"
+      devFileName="j98-pc/m";
+      sendPath="j98/pc";
+      elif [[ "$CI_COMMIT_MESSAGE" =~ "@P-j98-app" ]]; then
+      echo 'j98-app';
+      runOrder="build_app";
+      localFileName="build/*"
+      devFileName="j98-app";
+      sendPath="j98-app";
+
+      else
+      echo "配置错误";
+      return;
+      fi;
+
+    - rm -rf $localFileName
+    - npm run $runOrder
+    # 拷贝打包好的文件到同步目录  $devFileName对应皮的名字
+    - rm -rf /sync/$devFileName
+    - mkdir -p /sync/$devFileName
+    - cp -r $localFileName /sync/$devFileName
+    - echo "同步目录创建完成！"
+    - rsync -auv --password-file=/etc/rsyncd.passwd  /sync/$sendPath   rsyncuser@10.111.108.164::helloRsync 
+    - rsync -auv --password-file=/etc/rsyncd.passwd  /sync/$sendPath   rsyncuser@10.110.139.116::helloRsync 
+    
+    - echo "发布到线上成功。自己检查一下，通知客服测试没问题通知业主！";
+  allow_failure: false
+  only:
+    variables:
+    - $CI_COMMIT_MESSAGE =~ /@P/
+    # variables:
+    # - $CI_COMMIT_MESSAGE != "commPush"
+  when: manual

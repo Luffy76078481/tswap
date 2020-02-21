@@ -1,0 +1,98 @@
+.PrivateInfoPage{
+    height: 100%;
+    width: 100%;
+    background: $body;
+    .content{
+        padding: .5rem .6rem;
+        height: calc(100% - 3rem);
+        overflow: auto;
+        .item_box{
+            background: $contentBG;
+            margin: 0 0 .3rem 0;
+            padding: .3rem;
+            border-radius: .2rem;
+            overflow: hidden;
+            outline: 0;
+            box-shadow: $box-shadow;
+            .iconfont{
+                font-size: .3rem;
+                margin-right: .1rem;
+            }
+            .line{
+                border-bottom: 1px solid $border-bottom;
+                padding-bottom: .2rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                
+            }
+            .title{
+                color: $text2;
+                font-size: .24rem;
+                font-weight: 800;
+                line-height: .5rem;
+            }
+            .lineContent{
+                font-size: .28rem;
+                color: $text1;
+                line-height: .5rem;
+                display: flex;
+            }
+            .line_no_btm{
+                padding-top: .2rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .line_only{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            i{
+                padding: .06rem;
+                color: #fff;
+                border-radius: 5px;
+                font-size: .24rem;
+                font-style: normal;
+            }
+            .verified{
+                background: #0f7556;
+             
+            }
+            .unverified{
+                background: red;
+            }
+            
+        }
+        .warning{
+            color: $warning;
+            width: 100%;
+            text-align: center;
+            font-size: .3rem;
+        }    
+    }
+    .edit {
+        font-size: .3rem;
+        font-style: normal;
+        line-height: .8rem;
+
+        .icon {
+            display: inline-block;
+            width: .5rem;
+            height: .5rem;
+            border-radius: 5px;
+            line-height: .4rem;
+            text-align: center;
+            margin-left: .1rem;
+            background: $boxBG;
+            color: #fff !important;
+            font-size: .32rem;
+            box-sizing: border-box;
+            padding-bottom: 0.1rem;
+        }
+    }
+}

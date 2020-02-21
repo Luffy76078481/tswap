@@ -1,0 +1,74 @@
+.FooterBar_usd{
+    border-top: 1px solid $border;
+    background: $footBG;
+    height: 1rem;
+    display: flex;
+    box-sizing: border-box;
+    z-index: 1;
+    position: relative;
+    div,
+    a,
+    p,
+    span {
+        user-select: none;
+    }
+    &>a{
+        flex-grow: 1;
+        text-align: center;
+        color: $footFont;
+        padding-top: .15em;
+        &>p{
+            font-size: .21rem;
+            padding-top: .05rem;
+            color: $text;
+        }
+        &>.am-badge{
+            position: absolute;
+            top: .1rem;
+            right: .4rem;
+        }
+        .iconfont{
+            font-size: .4rem;
+            color: $footFont;
+        }
+   
+        &.faxian{
+            padding-top: .1rem;
+        }
+        .icon-icon_faxian::before{
+            font-size: .36rem;
+            
+        }
+
+        .icon-bofanganniu::before{
+            font-size: .2rem;
+        }
+    }
+    .active{
+        .iconfont{
+            color: $footActive;
+        }
+        &>p{
+            color: $footActive;
+        }
+        span.icon-shouye::before{
+            content: "\e602";
+        }
+        span.icon-qianbao::before{
+            content: "\e62c";
+        }
+        span.icon-liwulipinjiangpin-xianxing::before{
+            content: "\e7b7";
+        }
+        span.icon-wode::before{
+            content: "\e603";
+        }
+        
+    }
+    // 有未读消息才显示的小红点
+    .am-badge-dot{
+        width: .1rem;
+        height: .1rem;
+    }
+}
+

@@ -1,0 +1,145 @@
+.SharePage {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $MoneyPage;
+    right: 0;
+    
+    .content {
+        margin-top: .5rem;
+        padding: 0 .3rem;
+        overflow: auto;
+        height: calc(100% - 1rem);
+
+        .copy_text{
+            margin-bottom: .3rem;
+            font-weight: 800;
+            span{
+                background-image: $btnBG;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: .35rem;
+            }
+        }
+
+        .copy_link_box {
+            // border-radius: 5px;
+            padding: .1rem;
+            overflow: hidden;
+            background-color: $MpageBG;
+            color: $text1;
+            // box-shadow: $boxShadom;
+            margin-bottom: .3rem;
+            font-size: .25rem;
+            border: 1px solid $border-bottom;
+            .text_tip {
+                font-weight: 800;
+            }
+            .url_code {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                .link_url {
+                    background: $MpageBG;
+                    color: $text;
+                    width: 88%;
+                    text-align: left;
+                    margin-top: .1rem;
+                    line-height: .5rem;
+                    border: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .copyBtn{
+                    font-size: .25rem;
+                    text-align: center;
+                    width: 1rem;
+                    background: $btnBG;
+                    color: $text3;
+                    padding: .1rem;
+                }
+
+                .icon {
+                    width: .5rem;
+                    height: .5rem;
+                    background-color: red;
+                    border-radius: 5px;
+                    text-align: center;
+                    line-height: .5rem;
+                    color: #fff;
+                    font-size: .25rem;
+                }
+                @media screen and (min-width: 768px) {
+                    .icon {
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                    }
+                }
+            }
+        }
+
+        // .recmmended_num {
+        //     border-radius: 5px;
+        //     padding: .3rem;
+        //     overflow: hidden;
+        //     background-color: $contentBG;
+        //     color: $text1;
+        //     box-shadow: $boxShadom;
+        //     margin-bottom: .3rem;
+        //     font-size: .3rem;
+        //     font-weight: 800;
+        // }
+
+        .qr_code_box {
+            border-radius: 5px;
+            padding: .3rem;
+            overflow: hidden;
+            background-color: $MpageBG;
+            color: $text1;
+            box-shadow: $boxShadom;
+            margin-bottom: .3rem;
+            text-align: center;
+
+            // 1111111111
+            width: 70%;
+            margin: 0 auto;
+            height: 5rem;
+            position: relative;
+
+            .QRcodeBG{
+                width: 100%;
+                height: 90%;
+                background:url(./images/shareBG.jpg) no-repeat;
+                background-size: 100%;
+                background-position: center -.3rem;
+            }
+
+            canvas{
+                position: absolute;
+                bottom: 1rem;
+                left: .5rem;
+            }
+            p{
+                text-align: center;
+                margin-top: .3rem;
+                font-size: .25rem;
+            }
+        }
+        .Sharyapply{
+            margin-top: 1rem;
+            padding: .3rem;
+            color: $text1;
+            h4{
+                text-align: center;
+                padding: .2rem;
+                background-image:$btnBG; 
+                -webkit-background-clip:text; 
+                -webkit-text-fill-color:transparent;
+            }
+        }
+    }
+}

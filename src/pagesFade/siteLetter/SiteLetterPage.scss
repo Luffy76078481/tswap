@@ -1,0 +1,167 @@
+.SiteLetter {
+    width: 100%;
+    height: 100%;
+    background: $body;
+    
+
+    .am-accordion .am-accordion-item .am-accordion-header{
+        height: 1rem;
+        line-height: 1rem;
+        background: $MpageBG;
+        color: $text;
+        &::after{
+            background: none !important;
+        }
+    }
+    .am-accordion .am-accordion-item .am-accordion-header i{
+        opacity: $opacity;
+        width: .2rem;
+        height: .2rem;
+        top:.4rem;
+    }
+
+    .scroll-content {
+        border-top: none ;
+        overflow: auto;
+        height: calc(100% - 1rem);
+        .myListView {
+            .am-list-view-scrollview-content {
+                position: initial !important;
+
+                .am-list-body {
+                    &::before,&::after{
+                        background: none;
+                    }
+                    .list-view-section-body {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .listItem {
+                            width: 100%;
+
+                            .am-list-line {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .am-list-content {
+                                    flex: 1;
+                                    font-size: .28rem;
+                                    padding-top: .4rem;
+                                    padding-bottom: .4rem;
+                                }
+
+                                .am-list-extra {
+                                    flex-basis: 20%;
+                                    font-size: .24rem;
+                                    padding-top: .4rem;
+                                    padding-bottom: .4rem;
+                                    margin-left: 5px;
+                                }
+                            }
+
+                            .Badge {
+                                margin-right: .2rem;
+                                font-size: .24rem;
+                            }
+                        }
+                    }
+                }
+                .am-list-footer{
+                    padding: 0 .3rem;
+                    color: #424242;
+                }
+            }
+        }
+    }
+    .title{
+        font-size: .28rem;
+        font-weight: 900!important;
+    }
+    .am-list-item.messageAnnounce.am-list-item-middle{
+        padding: 0;
+    }
+    .am-list-line{
+        padding: 0!important;
+        &::after{
+            background: $border-bottom !important;
+            ;
+        }
+    }
+    .am-accordion.my-accordion{
+        &:before{
+            background: #FFF;
+            top: -1px;
+        }
+    }
+    .messageAnnounce{
+        display: block;
+        position: relative;
+        width: 100%;
+        .BadgeRight{
+            position:absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+        .BadgeLight{
+            position:absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+    .am-accordion-content-box{
+        font-size: .3rem !important;
+        white-space:normal;
+        margin: .16rem .3rem;
+        color: $myPageSizeColor !important;
+        &:after {
+            background: #fff!important;
+            height: 0 !important;
+        }
+    }
+    .AnnounceHeader{
+        // font-weight: 600;
+        color: $text1;
+        display: flex;
+        .newIcon{
+            display:inline-block ;
+            margin-right: .06rem;
+            display: flex;
+            align-items: center;
+            
+            sup {
+                height: .36rem;
+                line-height: .36rem;
+                min-width: .18rem;
+                font-size: .24rem;
+                padding: 0 .1rem;
+                border-radius: .24rem;
+            }
+        }
+        .title {
+            flex: 1;
+        }
+        .AnnounceTime{
+            float: right;
+            margin-right: .2rem;
+            font-size: .24rem;
+        }
+    }
+    .am-accordion-content.am-accordion-content-active{
+        background:$MoneyPage !important;
+    }
+    .am-list-item .am-list-line .am-list-content{
+        padding: 0!important;
+    }
+    .dataLoading { //玩命加载中
+        text-align: center;
+        line-height: 2rem;
+        color: #888;
+        width: 100%;
+        i {
+            margin-right: .1rem;
+        }
+    }
+}

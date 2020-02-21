@@ -1,0 +1,206 @@
+.LoginRegist{
+    height: 100%;
+    width: 100%;
+    background: url($LoginBG) 0 0/100% 100% no-repeat!important;
+    video{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        object-fit:fill;
+      }
+    .loginBox{
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        padding: 0 5%;
+        overflow: auto;
+        .titleEde{
+            width: 100%;
+            margin: .6rem 0 .48rem;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: justify;
+            justify-content: center;
+            &>div{
+                background-size: cover;
+                width: 1.8rem;
+                height: 2.1rem;
+                border-radius: .213333rem;
+                
+            }
+            &>div:nth-of-type(1){
+                background:  url("./images/titleEde1.png") 0 0/100% 100% no-repeat hsla(0,0%,100%,.6);;
+            }
+            &>div:nth-of-type(2){
+                background:  url("./images/titleEde2.png") 0 0/100% 100% no-repeat hsla(0,0%,100%,.6);;
+            }
+            &>div:nth-of-type(3){
+                background:  url("./images/titleEde3.png") 0 0/100% 100% no-repeat hsla(0,0%,100%,.6);;
+            }
+            &>.imgBoxUsd{
+                width: 3rem;
+                height: 1.5rem;
+                background:  url("./images/titleEdeUsd.png") 0 0/100% 100% no-repeat  !important;
+            }
+        }
+
+        .buttonBox{
+            width: 4rem;
+            height: .65rem;
+            overflow: hidden;
+            border-radius: 20px;
+            margin: auto;
+            margin-bottom: .5rem;
+            display: flex;
+            &>div{
+                flex-grow: 1;
+                text-align: center;
+                line-height: .65rem;
+                font-size: .3rem;
+                color: #fff;
+                background:rgba(77, 77, 77, 1);
+            }
+            .buttomBoxActive{
+                background: $dengLu;
+            }
+        }
+
+
+        .loginCont{
+            // height: 9rem;
+            text-align: center;
+            &>p{
+                color: #333;
+                font-size: .44rem;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+            .inputBox{
+                position: relative;
+                margin-top: .28rem;
+                .icon-yonghu,.icon-mima,.icon1{
+                    color: #a8a8a8;
+                    position: absolute;
+                    left: .346667rem;
+                    top: .2rem;
+                    width: .48rem;
+                    height: .48rem;
+                    font-size: .4rem;
+                    z-index: 1;
+                }
+                i{
+                    color: #333;
+                    display: block;
+                    position: absolute;
+                    bottom: .5rem;
+                    left: 1.066667rem;
+                    z-index: 1;
+                    font-weight: 400;
+                    font-style: normal;
+                }
+                input{
+                    width: 72%;
+                    height: .9rem;
+                    font-family: PingFangSC-Regular;
+                    font-size: .293333rem;
+                    padding-left: 1.066667rem;
+                    color: #333;
+                    border: none;
+                    padding-right: .8rem;
+                    background: #fff;
+                    border-radius: 15px;
+
+                }
+                .AuthCode{
+                    height: .9rem;
+                }
+                img{
+                    position: absolute;
+                    right: .3rem;
+                }
+                .icon-guanbi,.icon-yincangbukejian,.icon-yincangkejian{
+                    position: absolute;
+                    right: .2rem;
+                    width: .48rem;
+                    height: .48rem;
+                    z-index: 1;
+                    font-size: .35rem;
+                    bottom: .2rem;
+                }
+                .conslo{
+                    color: rgb(194, 31, 31);
+                    margin-top: .18rem;
+                    /* display: none; */
+                    background-size: contain;
+                    height: .4rem;
+                    padding-left: .48rem;
+                    font-size: .293333rem;
+                    position: relative;
+                }
+            }
+            .swichBox{
+                width: 100%;
+                height: .8rem;
+                margin-top: .133333rem;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                font-size: .4rem;
+                &>span{
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    color: #fff;
+                    border-radius: .213333rem;
+                    .check{
+                        display: block;
+                        width: .36rem;
+                        font-size: .32rem;
+                        padding-left: .1rem
+                    }
+                    .checkFont{
+                        font-size: .28rem;
+                        padding-left: .1rem;
+                    }
+                }
+            }
+            .loginBtn{
+                width: 80%;
+                height: .8rem;
+                line-height: .8rem;
+                font-size: .3rem;
+                color: #fff;
+                letter-spacing: .048rem;
+                text-align: center;
+                margin: auto;
+                margin-top: .266667rem;
+                opacity: .88;
+                background: $boxBG;
+                border-radius: .6rem;
+            }
+            .goBack{
+                color: #fff;
+                background: #666;
+                text-align: center;
+                margin-top: .333333rem;
+                font-size: .3rem;
+            }
+    
+        }
+    }
+    .regBotImg{
+        left: 0;
+        right: 0;
+        margin: 1rem auto .2rem;
+        width: 1.3rem;
+        height: 1.4rem;
+        display: block;
+
+    }
+}

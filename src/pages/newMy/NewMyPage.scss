@@ -1,0 +1,241 @@
+.MyNewPage{
+    .Head{
+        width: 100%;
+        height: 3rem;
+        position: relative;
+        background: linear-gradient(to right, #ccad77 0%,#d4a758 100%);
+        .head_title{
+            position: absolute;
+            left: 50%;
+            margin-top: .3rem;
+            color: #fff;
+        }
+        .head_znx{
+            position: absolute;
+            right: .1rem;
+            margin-top: .3rem;
+            color: #fff;
+            width: .6rem;
+            height: .6rem;
+            text-align: center;
+            .iconfont{
+                font-size: .36rem;
+            }
+        }
+        .myInfo{
+            background: #fff;
+            width: 95%;
+            height: 2.5rem;
+            border-radius: 5px;
+            position: absolute;
+            top: 1.3rem;
+            left: .2rem;
+            .palace__1MM09{
+                border-radius: 5px;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                background: #fff;
+                display: flex;
+                padding:.3rem 0;
+                margin: 2.7rem auto .5rem;
+                
+                .grid__3Xa5w{
+                    flex-grow: 1;
+                    text-align: center;
+                    color: $normal;
+                    &>p{
+                        font-size: .27rem;
+                        color: $normalFont;
+                        padding-top: .1rem;
+                    }
+                    &>span{
+                        font-size: .5rem;
+                    }
+                }
+                .grid__3Xa5w:nth-of-type(1){
+                    color: #16b2fe;
+                }
+                .grid__3Xa5w:nth-of-type(2){
+                    color: #fe8b15;
+                }
+                .grid__3Xa5w:nth-of-type(3){
+                    color:#8324ff;
+                }
+            }
+            .head_pic{
+                position: absolute;
+                top: .5rem;
+                left: .5rem;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            .head_user_name{
+                position: absolute;
+                top: .8rem;
+                left: 2.5rem;
+            }
+            .head_user_vip{
+                position: absolute;
+                top: 1.4rem;
+                left: 2.5rem;
+                font-size: .3rem;
+            }
+            .money_num {
+                span {
+                    font-size: .3rem;
+                    color: #f00;
+                    position: absolute;
+                    top: .8rem;
+                    right: 1.65rem;
+                }
+                i {
+                    font-style: normal;
+                    color: #000;
+                }
+            }
+            .btns{
+                width: 35%;
+                position: absolute;
+                top: 1.3rem;
+                right: 0;
+                a {
+                    width: 40%;
+                    border-radius: 5px;
+                    padding: .06rem .1rem;
+                    display: inline-block;
+                    font-size: .24rem;
+                    color: #fff;
+                    
+                    &.check_all {
+                        background-color: #ff6e07;
+                        margin-right: .2rem;
+                    }
+                }
+                .refresh {
+                    font-size: .25rem;
+                    padding: .1rem;
+                }
+            }
+        }
+    }
+    flex-direction:column;
+    height: 100%;
+    display: flex;
+    .content-container{
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 6.6rem);
+        margin-top: 2.7rem;
+        overflow: auto;
+        .second__25kyk {
+            width: 100%;
+            height: 100%;
+            -ms-flex: 1 1;
+            flex: 1 1;
+            position: relative;
+            margin-bottom: -.026667rem;
+            >a{
+                display: block;
+            }
+            .gg{
+                width: 95%;
+                margin: 0 auto .4rem;
+                border-radius: 10px;
+                background: #fff;
+                .myAcount{
+                    display: block;
+                    margin-top: -.75rem;
+                    .listItem{
+                        border-top-left-radius: 18px;
+                        border-top-right-radius: 18px;
+                    }
+                }
+    
+                .listItem{
+                    height: .8rem;
+                    padding-left: .4rem;
+                    min-height: .8rem;
+                    .am-list-content{
+                        color: $normalFont!important;
+                    }
+                }
+                .listIcon{
+                    font-size: .4rem;
+                    margin-right: .3rem;
+                }
+                .icon-md-guangbo{
+                    color: #d36bc2;
+                }
+                .icon-yinhangka{
+                    color: #70db2a;
+                }
+                .icon-zhanghumingxi{
+                    color: #f10547;
+                }
+                .icon-liwu{
+                    color: #ff6837;
+                }
+                .icon-gerenbaobiao{
+                    color: #006837;
+                }
+                .icon-yonghu{
+                    color: #d36bc2;
+                }
+                .icon-anquanzhongxin{
+                    color: #0ba2d4;
+                }
+                .icon-guanyuwomen{
+                    color: #2c368d;
+                }
+                .icon-wodexiaoxi{
+                    color: #01b0e8;
+                }
+                .icon-youxiang{
+                    color: rgba(255,0,0,.6);
+                }
+                .icon-lianxiwomen{
+                    color: #00649e;
+                }
+                .icon-gerenbaobiao{
+                    color: #fe8b15;
+                }
+                .icon-xiazai{
+                    color: #af9683;
+                }
+                
+                .listSpan{
+                    font-size: .3rem;
+                }   
+            }
+            .exit__VoeN{
+                margin: 0.4rem auto 0;
+                width: 95%;
+                line-height: .8rem;
+                background: #fff;
+                font-size: .38rem;
+                color: #8a8a8a;
+                text-align: center;
+                border-radius: 5px;
+            }
+        }
+    }
+    // ANTD改自适应
+    .am-list-line{
+        padding-right: .3rem;
+        border-bottom: 1px solid rgba(200,200,205,.2);
+        .am-list-content{
+            padding-top: .12rem;
+            padding-bottom: .12rem;
+            font-size: .26rem;
+        }
+        .am-list-extra{
+            font-size: .3rem;
+        }
+    }
+    .am-list-arrow{
+        width: .3rem !important;
+        height: .3rem !important;
+        margin-left: .25rem !important;
+    } 
+}

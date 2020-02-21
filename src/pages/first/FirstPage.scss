@@ -1,0 +1,13 @@
+.FirstPage {
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+
+    .content {
+        flex-grow: 1;
+        height: calc(100% - .9rem);
+    }
+}
+
+
+

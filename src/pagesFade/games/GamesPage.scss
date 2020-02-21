@@ -1,0 +1,113 @@
+.GamesPage{
+    height: 100%;
+    width: 100%;
+    // background: #efefef;
+    .GamesPageContent{
+        
+    }
+    .tabs {
+        height: .7rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        text-align: left;
+        box-shadow: 0 0 3px $box-shadow;
+        .tabsCate.active {
+            color: $footActive;
+            border-color: $footActive;
+        }
+        .tabsCate {
+            display: inline-block;
+            line-height: .65rem;
+            font-size: .25rem;
+            color: $footFont;
+            padding: 0 .2rem;
+            border-bottom: 2px solid $border;
+        }
+    }
+
+    .myListView {
+        position: absolute !important;
+        top: 1.55rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: auto;
+        .am-list-body{
+            background: none;
+        }
+
+        .am-list-body::before,.am-list-body::after {
+            height: 0;
+        }
+       
+        .list-view-section-body {
+            display: flex;
+            flex-wrap: wrap;
+            .am-flexbox{
+                display: block;
+            }
+            .listItem {
+                position: relative;
+                font-size: .25rem;
+                box-sizing: border-box;
+                width: 25%;
+                border: 1px solid $border;
+                margin: 0;
+                font-size: .25rem;
+                .itemL {
+                    width: 67%;
+                    margin: .2rem auto .1rem auto;
+                    span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 3px;
+                        color: #fff;
+                    }
+
+                    img {
+                        width: 100%;
+                        border-radius: 13px;
+                        overflow: hidden;
+                    }
+                }
+
+                .itemR {
+                    margin-left: 0;
+                    h5 {
+                        color: $GameFont;
+                        font-size: .25rem;
+                        font-weight: normal;
+                        text-align: center;
+                        margin-bottom: .1rem;
+                    }
+
+                    p {
+                        color: #555;
+                    }
+                    .gameInfo{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        .icon-shoucang{
+                            color: $GameFont;
+                        }
+                        .icon-shoucang-tianchong::before{
+                            color: $GameFontActive;
+                        }
+                    }
+
+                    i {
+
+
+                        &.icon-star {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

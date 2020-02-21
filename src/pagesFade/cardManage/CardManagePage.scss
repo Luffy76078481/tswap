@@ -1,0 +1,83 @@
+.CardManage{
+    height: 100%;
+    width: 100%;
+    background: $body;
+    .scroll-content{
+        padding: 0 .1rem;
+        overflow: auto;
+        height: calc(100% - 1rem);
+        margin-top: .1rem;
+        .card{
+            width: 98%;
+            height: 4rem;
+            margin: 0 auto;
+            position: relative;
+            border-radius: .2rem;
+            margin-top: .3rem;
+            margin-bottom: .3rem;
+            color: #ffffff;
+            font-size: .35rem;
+            .BankTitle{
+                padding: .2rem;
+                margin-bottom: .4rem;
+                position: relative;
+                top: .1rem;
+                left: .3rem;
+            }
+            .BankNum{
+                padding: .2rem;
+                position: absolute;
+                top: 2.1rem;
+                left: .4rem;
+            }
+            .BankDefault{
+                width: .8rem;
+                height: .4rem;
+                line-height: .4rem;
+                text-align: center;
+                display: inline-block;
+                position: absolute;
+                border-radius: .3rem;
+                right: .5rem;
+                font-size: .2rem;
+                background: #fff;
+                color: $text;
+                
+            }   
+        }
+        .card:nth-of-type(1n){
+            background: url(./CardImage/card1.png) 0 0 no-repeat;
+            background-size: 100%;
+        }
+        .card:nth-of-type(2n){
+            background:url(./CardImage/card2.png) 0 0 no-repeat;
+            background-size: 100%;
+        }
+        .card:nth-of-type(3n){
+            // background:url(./CardImage/card3.png) 0 0 no-repeat;
+            // background-size: 100%;
+            display: none;
+        }
+        
+        .noCard {
+            text-align: center;
+            color: #888;
+            font-size: .3rem;
+            line-height: 2rem;
+        }
+        
+        .btn {
+            height: .75rem;
+            font-size: .3rem;
+            color: #fff;
+            background-color:$boxBG;
+            margin: 0.2rem auto .8rem;
+            width: 95%;
+            text-align: center;
+            line-height: .75rem;
+            display: block;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+}

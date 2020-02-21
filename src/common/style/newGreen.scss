@@ -1,0 +1,119 @@
+$boxBG:#07855F;
+$publicTxtStyle:#FFCC00;
+$testBG:#FFCC00;
+$contentBG:#07855F;
+$active:#000;
+$normal:#fff;
+$fontColor:#393732;
+$normalFont:#333;
+$border:#c8c8cd66;
+$footBG:#07855F;
+$footActive:#F0D83C;
+$footFont:#F0D83C;
+$footP:#fff;
+$GameFont:rgb(25, 128, 95);
+$GameFontActive:rgb(25, 128, 95);
+$GameBorderSize:1px;
+$leftBG:#282828;
+$leftColor:#fff;
+$leftColorBG:#3C3F3E;
+$leftActive:#282828;
+$headH:1rem;
+$messageBG:rgb(25, 128, 95);
+$message:#fff;
+$gradientBG:#07855F;
+$url:"../../common/style/images/head_green.png";
+@mixin PopWindowBG(){
+	background:url($url) no-repeat 0 0 / 100% 100%;
+}
+$Carousel:#07855F;
+$navBarCol:#62E2BB;
+$spanIco:#fff;
+$handleTitle:#07855F;
+$handleTitleBT:#046f50;
+$handleTitleBG:#FFCC00;
+$dengLu:#07855F;
+$hintBottom:#fff;
+$MpageBG:#fff;
+$MoneyPage:#ececec;
+$PopWindowBG1:none;
+$PopWindowColor:#393732;
+$popBG:#fff;
+$body:#fff;
+$root:#3C3F3E;
+$Navbar:#07855F;
+$Navtext:#fff;
+$text:#000;
+$text1:#000;
+$text2:#000;
+$text3:#fff;
+$text4:#000;
+$text5: #fff;
+$text6: #FFCC00;
+$Hint:#888;
+$myPageSizeColor:#333;
+$boxShadom:0 0 0.2rem 0.01rem #b3b3b3;
+$border-bottom:rgba(135, 135, 138, 0.3);
+$borderA:rgb(33,154,116);
+$borderB:#282828;
+$borderC:#046f50;
+$leftTestActive:#FFCC00;
+$leftHr:#212121;
+$warning:#f00;
+$LoginBG:'./images/loginBG.png';
+$LoginBG1:'../../pagesFade/loginRegist/images/loginBG.png';
+$LoginBtnBG: linear-gradient(to right, #9e948c 0%, #af9683 100%);
+$disableBG:#b5b7b6;
+$disableColor:#fff;
+$disableBorder:#b5b7b6;
+$messageNavColor:#000;
+$warningtest:rgb(25, 128, 95);
+$box-shadow: 0 0 9px 0 rgba(145, 145, 145, 0.62);
+$btnBG:linear-gradient(to right, #66ab96 0%, #34966a 100%);
+$btnColor:#fff;
+$btnBG1:#fff;
+$btnColot1:rgb(25, 128, 95);
+$opacity:1;
+$noticeBG:#07855F;
+$noticeContentBG:#fff;
+$PlaceHoder:#bbb;
+$checkBG:#fff;
+$checkBG1:rgb(25, 128, 95);
+$checkText:#fff;
+$noData:'./images/no1.png';
+$aboutBG:#ccc;
+.icon{ // 图标
+    font-size:.35rem;
+    &.icon-hongbao{ color: #ff0000}
+    &.icon-zhuanpan{color: #277327;}
+    &.icon-icon_chongzhi{color: #d36bc2;}
+    &.icon-zhuanzhangjilu{color: #70db2a;}
+    &.icon-touzhujilu1{color: #ff6837;}
+    &.icon-youhuijilu{color: #0ba2d4;}
+    &.icon-md-guangbo{color: #d36bc2;}
+    &.icon-yinhangka{color: #70db2a;}
+    &.icon-zhanghumingxi{color: #f10547;}
+    &.icon-liwu{color: #ff6837;}
+    &.icon-gerenbaobiao{color: #006837;}
+    &.icon-anquanzhongxin{color: #0ba2d4;}
+    &.icon-guanyuwomen{color: #2c368d;}
+    &.icon-wodexiaoxi{color: #01b0e8;}
+    &.icon-lianxiwomen{color: #00649e;}
+    &.icon-cunkuan{color: #F0D83C;}
+    &.icon-youhui{color: #F0D83C;}
+    &.icon-huodong{color:#8324ff;}
+    &.icon-liwulipinjiangpin{color: #FF4E6A;}
+    &.icon-qukuan{color: #F0D83C;}
+    &.icon-yonghu{color: #d36bc2;}
+    &.icon-mima54{color: #70db2a;}
+    &.icon-yanzhengmamima{color: #f10547;}
+    &.icon-youxiang{color: #ff6837;}
+    &.icon-qq1{color: #006837;}
+    &.icon-shouji1{color: #0ba2d4;}
+    &.icon-qukuanmima{color: #2c368d;}
+    &.icon-xiazai{color: #FE8A1E;} 
+    &.icon-wode{color: burlywood;}
+    &.icon-shengri{color: chartreuse;}
+    &.icon-weixin{color: cyan;}
+    &.icon-bangzhu{color: #8324ff;} 
+}

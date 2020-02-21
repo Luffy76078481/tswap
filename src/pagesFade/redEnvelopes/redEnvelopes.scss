@@ -1,0 +1,221 @@
+
+.RedEnvelopes{
+    z-index: 2;
+    background-color: #892822;
+    position:relative;
+    .top{
+        position: relative;
+        display: flex;
+        height: 1rem;
+        align-items: center;
+        background-color: $Navbar;
+        >div{
+            flex: 1;
+            font-size: .35rem;
+            &.goback{
+                span{
+                    color: #fff;
+                    margin-left: .25rem;
+                }
+            }
+            p{
+                color: #fff;
+                text-align: center;
+                line-height: 1rem;
+            }
+            button.check_redEnv{
+                font-size: .25rem;
+                background-image: linear-gradient(to bottom, #ffce5f 0%, #fffc92 100%);
+                background: #fff;
+                color: $testBG;
+                padding: .1rem .2rem;
+                border-radius: 5px;
+                float: right;
+                margin-right: .25rem;
+            }              
+        }
+    }
+    // 中奖查询弹窗
+    .List_Of_winners{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 6;
+        .shelter{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgba($color: #000, $alpha:.4);           
+        }
+        .close{
+            position: absolute;
+            right: .2rem;
+            top: 1rem;
+            color: #FFF;
+        }
+        .tableWinner{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: auto;
+            left: 0;
+            right: 0;
+            z-index: 7;
+            width: 6rem;
+            background-color: #7f0102;
+            p{
+                border-top-left-radius: .2rem;
+                border-top-right-radius: .2rem;
+                background-image:linear-gradient(to bottom, #de721f 0%, #cb2e0c 100%);
+                color: #fff;
+                font-size: .35rem;
+                line-height: .75rem;
+                text-align: center;
+            }
+            .tableScr{
+                max-height: 6.15rem;
+                overflow: scroll;
+            }
+            table{
+                border: 1px solid #dd0002;
+                width: 100%;
+                font-size: .275rem;
+                thead tr{
+                    background-color: #700001;
+                    td{
+                        color:rgb(255, 230, 129) ;
+                    }
+                }
+                tr td{
+                    line-height: .5rem;
+                    text-align: center;
+                    font-size: .275rem;
+                    border: 1px solid #dd0002;
+                    border-bottom: 0px;
+                    border-left: 0px;
+                }
+                tbody tr td{
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    .redEnvCots{
+        position: absolute;
+        height: calc(100% - 1rem);
+        overflow: hidden;
+        width: 100%;
+        left: 0;
+        main{
+            padding: 5.1rem 0.5625rem 1.3125rem;
+            background: url(./images/main_bg.jpg) no-repeat center top;
+            background-size: 100% auto;
+            .notice{
+                margin: 0 auto;
+                box-sizing: border-box;
+                height: 2rem;
+                padding: .4rem 0;
+                text-align: center;
+                width: 2.5rem;
+                span{
+                    font-size: .25rem;
+                    color: #fff;
+                }
+            }
+            .redButtons{
+                width: 80%;
+                margin: 0 auto 1.25rem;
+                button{
+                    width: 100%;
+                    line-height: .75rem;
+                    padding: 0 0.15rem;
+                    height: .8rem;
+                    border-radius: 0.4rem;
+                    box-sizing: border-box;
+                    color: #a80e08;
+                    background-image: linear-gradient(to bottom, #ffce5f 0%, #fffc92 100%);
+                    font-weight: bold;
+                    font-size: .275rem;
+                    margin-top: .25rem;
+                }
+            }
+            // 红包规则，细则，中奖名单
+            .redEnv_wrap{
+                title{
+                    display: block;
+                    margin: .3rem auto;
+                    height: .68rem;
+                    width: 100%;
+                }
+                title.listTit{
+                    background:url(./images/getlist.png) no-repeat center / 150%;
+                }
+                title.details{
+                    background:url(./images/hd-1.png) no-repeat center / 150%;
+                }
+                // title.description{
+                //     background:url(./images/hd-2.png) no-repeat center / 150%;
+                // }
+                title.role{
+                    background:url(./images/hd-3.png) no-repeat center / 150%;
+                }
+                p,span,tr,th,td{
+                    font-size: .275rem;
+                    color: #fff;
+                    line-height: .35rem;
+                }
+                table{
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    width: 100%;
+                    margin: .2rem 0;
+                    .tbl{                 
+                        background: #5a0109;
+                        font-size: 14px;
+                        color: #ffbf7b;
+                    }
+                    th,td{
+                        background: #450107;
+                        border: solid 1px #581b20;
+                        padding: .1rem 0;
+                        text-align: center;
+                    }
+                }
+                // 中奖名单
+                .prizeList{
+                    padding: 0 .5rem;
+                    height: 3rem;
+                    overflow: hidden;
+                    position: relative;
+                    ul.awardsCot{
+                        position: absolute;
+                        li{
+                            height: .4rem;
+                            span{
+                                line-height: .4rem;
+                                display: inline-block;
+                                vertical-align: bottom;
+                                text-align: left;
+                                &.yellow{
+                                    color: #fff000;
+                                }
+                                &.fixW{
+                                    width: 1.5rem;
+                                    overflow: hidden;
+                                    text-overflow:ellipsis;
+                                    white-space: nowrap;
+                                }
+                                &.money{
+                                    padding: 0 .05rem;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}

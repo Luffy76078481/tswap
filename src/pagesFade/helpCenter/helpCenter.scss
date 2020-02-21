@@ -1,0 +1,73 @@
+.helpCenter{
+    background: $MoneyPage !important;
+    color: $text1;
+    height: 100%;
+    .helpTitle{
+        padding: 0 .3rem .3rem;
+        overflow: auto;
+        // height: calc(100% - 1rem);
+        .am-list-body{
+            background: none;
+            &::before{
+                background: none;
+            }
+            &::after{
+                background: none;
+            }
+        }
+        div:nth-child(1) {
+           & .am-list-item {
+               margin-top: .5rem;
+               border-radius: 5px;
+               box-shadow: $box-shadow;
+               background: $MpageBG !important;
+              & .am-list-line {
+                 justify-content: space-between !important;
+                 & .am-list-extra {
+                     text-align: left !important;
+                     color: $text1;
+                 }
+               }
+           }
+       }
+       .am-textarea-item {
+           margin-top: .4rem;
+           border-radius: 5px;
+           box-shadow: $box-shadow;
+       }
+    }
+    .helpContent{
+        padding: .3rem;
+        overflow: auto;
+        height: calc(100% - 3rem);
+   }
+
+    .am-tabs-default-bar-tab{
+        color: $messageNavColor;
+        background: $contentBG;
+        font-size: .25rem;
+        line-height: .6rem;
+        height: .6rem;
+        padding: 0 0 8px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        &::after{
+            background: none !important;
+        }
+    }
+
+    .am-tabs-default-bar-nextpage,.am-tabs-default-bar-prevpage{
+        background: none;
+    }
+
+    .am-tabs-default-bar-tab-active{
+        color: $boxBG;
+    }
+    .am-tabs-default-bar-underline{
+        border-color: $boxBG;
+    }
+    .am-tabs-default-bar-content{
+        background: $contentBG;
+    }
+}

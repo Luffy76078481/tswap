@@ -1,0 +1,39 @@
+.NoticeBar {
+    text-align: center;
+    .icon-md-guangbo{
+        &::before{
+            font-size: 0.25rem;
+            width: .4rem;
+            height: .4rem;
+            line-height: .4rem;
+        }
+        vertical-align: .03rem;
+    }
+    .wrapper {
+        font-size: 0.25rem;
+        color: $testBG;
+        display: inline-block;
+        margin-left: 0.1rem;
+        margin-right: .1rem;
+        width: 5.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: left;
+    }
+    .usdLogo{
+        width: .7rem;
+        height: .36rem;
+        background: url(./images/ag.vip.png) 0 0/100% 100% no-repeat;
+        display: inline-block;
+        vertical-align: -.06rem;
+    }
+
+    .inner {
+        overflow: hidden;
+    }
+
+    .inner p {
+        display: inline-block;
+    }
+
+}

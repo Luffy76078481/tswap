@@ -1,0 +1,78 @@
+.ServicePage {
+    width: 100%;
+    height: 100%;
+    background: $body;
+    .scroll-content {
+        border-top: none ;
+        overflow: auto;
+        height: calc(100% - 1rem);
+        .list {
+            width: 100%;
+            .title {
+                text-align: center;
+                padding: .4rem 0;
+                font-size: .3rem;
+            }
+            .am-list-body{
+                position: static;
+                background: $body;
+                border: none;
+                p{
+                    color: $text;
+                }
+                .my-am-list-item {
+                    width: 90%;
+                    margin: .2rem auto;
+                    padding: 0 .1rem;
+                    background: $MpageBG;
+                    border-radius: 10px;
+                    box-shadow: $boxShadom;
+                    .link_url{
+                        width: 50%;
+                        text-align: left;
+                        margin-top: .1rem;
+                        line-height: 20px;
+                        border: 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .copy{
+                        display: inline-block;
+                        width: .75rem;
+                        font-size: .25rem;
+                        background-color: $boxBG;
+                        border-radius: 5px;
+                        text-align: center;
+                        color: #fff;
+                        float: right;
+                        margin-top: .15rem;
+                    }
+                    .am-list-item{
+                        // border-bottom: 1px solid  rgba(200,200,205,.2);
+                        padding-left: 0;
+                        .am-list-content{
+                            color: $text;
+                            font-size: .3rem;
+                            padding: .1rem 0;
+                            i {
+                                margin: 0 .2rem;
+                                font-size: .4rem;
+                            }
+                            .icon-weixin{
+                                color: aqua;
+                            }
+                            .icon-gongzuoshijian{
+                                color: burlywood;
+                            }
+                            input{
+                                background: $MpageBG;
+                                color: $text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

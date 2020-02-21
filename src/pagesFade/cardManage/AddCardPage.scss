@@ -1,0 +1,112 @@
+.AddCard{
+    height: 100%;
+    width: 100%;
+    background: $root;
+    ::-webkit-input-placeholder{
+        color: $PlaceHoder !important;
+    }
+    .scroll-content{
+        margin-top: 0.9rem;
+        margin-bottom: 1.1rem;
+        background: $body;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        will-change: scroll-position;
+        contain: size style layout;
+        height: 100%;
+        .am-list-body{
+            position: static;
+            border: none; 
+            background: $body;
+            &::after{
+                background: none;
+            }
+        }
+        .circle-wrap {
+            margin: .25rem .2rem;
+            padding: 0rem .2rem;
+            border-radius: .2rem;
+            overflow: hidden;
+            outline: 0;
+            background: $MpageBG;
+            box-shadow: $box-shadow;
+            .warning-placehoder {
+                position: static;
+            }
+            .am-list-line {
+                position: static;
+                &::after{
+                    background: $border-bottom !important;
+                }
+            }
+            input{
+                font-size: .25rem;
+                color: $text2 !important;
+            }
+        }
+        .am-list-content,.am-input-label,.am-list-extra,.am-input-control{
+            color: $text2 !important;
+            font-size: .25rem !important;
+        }
+        .am-input-label-5{
+            width: 1.7rem;
+        }
+        .am-input-item{
+            height: .9rem;
+        }
+        
+        
+    }
+
+    .btn {
+        height: .75rem;
+        font-size: .3rem;
+        color: #fff;
+        background-color:$boxBG;
+        margin: 0.5rem auto .8rem;
+        width: 95%;
+        text-align: center;
+        line-height: .75rem;
+        display: block;
+        border: none;
+        border-radius: 10px;
+    }
+    .am-list-content{
+        font-size: .25rem;
+        color: #000;
+    }
+
+    // 11111111111111111111111111111111111111111111111111111
+    .prompt{
+        width: 80%;
+        margin: 0 auto;
+        font-size: .3rem;
+        span{
+            color: #24b3ee;
+        }
+    }
+
+    .yanzheng{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fff;
+        color: #24b3ee;
+        border: 1px solid #24b3ee;
+        height: 0.5rem;
+        line-height: .5rem;
+        padding: .05rem .1rem;
+        &:active{
+            color: #fff;
+            background: #24b3ee;
+        }
+    }
+    
+}

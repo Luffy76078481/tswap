@@ -1,0 +1,13 @@
+.livePage{
+    height: 100%;
+    overflow: auto;
+    .pageContent{
+        width: 100%;
+        // height: calc(100% - 2rem);
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+

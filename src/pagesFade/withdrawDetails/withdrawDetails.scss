@@ -1,0 +1,38 @@
+.withdrawDetails{
+    background: $root !important;
+    color: $text1;
+    height: 100%;
+    .scroll-content{
+        padding:.3rem;
+        overflow: auto;
+        height: calc(100% - 1rem);
+    }
+    .am-tabs-default-bar-tab{
+        color: $messageNavColor;
+        background: $contentBG;
+        font-size: .25rem;
+        line-height: .6rem;
+        height: .6rem;
+        padding: 0 0 8px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        &::after{
+            background: none !important;
+        }
+    }
+
+    .am-tabs-default-bar-nextpage,.am-tabs-default-bar-prevpage{
+        background: none;
+    }
+
+    .am-tabs-default-bar-tab-active{
+        color: $boxBG;
+    }
+    .am-tabs-default-bar-underline{
+        border-color: $boxBG;
+    }
+    .am-tabs-default-bar-content{
+        background: $contentBG;
+    }
+}

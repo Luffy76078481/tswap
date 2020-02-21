@@ -1,0 +1,119 @@
+.WithdrawPage{
+    background-color: $body;
+    ::-webkit-input-placeholder{
+        color: $PlaceHoder !important;
+    }
+    .scroll-content{
+        overflow-y: auto;
+        height: calc(100% - 1rem);
+        .am-list-body{
+            background: $contentBG;
+            &::before{
+                background: none;
+            }
+            &::after{
+                background: none;
+            }
+            .am-input-control{
+                input{
+                    color: $text;
+                }
+            }
+            
+        }
+        .am-list-item{  
+            height: .75rem;
+            line-height: .75rem;
+            span,p,.am-input-label-5,.am-list-extra{
+                color: $text2!important;
+                font-size: .275rem;
+            }    
+            span{
+                &.title{
+                    float: left;
+                }
+                &:nth-child(2){
+                    float: right;
+                }
+            }    
+            .am-list-content>.am-list-item{
+                padding: 0;
+            }
+            
+            .am-list-item .am-input-label.am-input-label-5{
+                width: .75rem;
+            }
+            .am-list-line{
+                &::after{
+                    background: $border !important;
+                }
+                .am-list-line{
+                    &::after{
+                        background: none !important;
+                    }
+                }
+            }
+        }
+        .noPaddingLeft .am-list-extra{
+            flex-basis: 15%;
+        }
+        .accounts{
+            .am-list-item .am-list-line .am-list-extra{
+                flex-basis: 100%; 
+                text-align: left;
+            }
+        }
+    }
+    .circle-wrap{
+        margin: .2rem;
+        border-radius: .2rem;
+        overflow: hidden;
+        outline: 0;
+        box-shadow: $box-shadow;
+        .addAmount{
+            background: $boxBG;
+            border-radius: .2rem;
+            text-align: center;
+            // a:first-child {
+            //     width: 1rem;
+            //     height: .4rem;
+            //     position: fixed;
+            //     top: 3.98rem;
+            //     right: 1.7rem;
+            //     background: $boxBG;
+            //     border-radius: .2rem;
+            //     color: #fff;
+            //     font-size: .2rem;
+            //     line-height: .4rem;
+            // }
+            a{
+                color: #fff;
+                font-size: .2rem;
+                line-height: .4rem;
+            }
+        }
+    }
+    .tips{
+        padding: .15rem .18rem 0;
+        font-size: .275rem;
+        color: $warningtest;
+        line-height: .4rem;
+        display: block;
+        letter-spacing: .005rem;
+        a{
+            color: #ff0000;
+            text-decoration: underline;
+        }
+    }
+    @media only screen and (min-device-width: 768px){
+        .am-list-item .am-input-control input{
+            height: .75rem;
+            line-height: .75rem;  
+            font-size: .275rem;   
+        }
+        .am-list-item .am-input-label.am-input-label-5{
+            width: 1.5rem;
+        }
+    }
+
+}

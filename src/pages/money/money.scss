@@ -1,0 +1,409 @@
+.MoneyPage{
+    flex-direction:column;
+    height: 100%;
+    display: flex;
+    background: $MoneyPage;
+    // 遮挡层
+    .mask{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .dom{
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background: $MpageBG;
+        overflow: scroll;
+        z-index: 2;
+        .title{
+            border-bottom: 1px solid $boxBG;
+            font-weight: bold;
+            text-align: center;
+            line-height: .6rem;
+            height: .6rem;
+            font-size: .35rem;
+            color: $boxBG;
+            position: relative;
+            i{
+                font-size: .3rem;
+                position: absolute;
+                left: .15rem;
+                top: 0;
+            }
+        }
+        .amount{
+            font-size: .3rem;
+            font-weight: bold;
+            color: $text;
+            line-height: 1rem;
+            text-align: center;
+            span{
+                font-size: .35rem;
+                color: $boxBG;
+            }
+        }
+        .remind{
+            margin-top: 1rem;
+            p{
+                color:$myPageSizeColor;
+                height: .7rem;
+                line-height: .7rem;
+                font-size: .275rem;
+            }
+        }
+    }
+    .scrollCont{
+        top: 1rem;
+        bottom: .9rem;
+        position: absolute;
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
+        .content{
+            color: $myPageSizeColor;
+            height: auto;
+            padding: 0 .2rem;
+        }
+        .pickPay{
+            font-size: .275rem;
+            font-weight: bold;
+            display: block;
+            padding: .25rem 0;
+        }
+        .remark{
+            padding: 0 0 .2rem 0;
+            font-size: 0.25rem;
+            font-weight: 500;
+        }
+        .am-flexbox.am-flexbox-align-center{
+            flex-wrap: wrap;
+        }
+        // 支付方式
+        .tabsItem{
+            display: block;
+            width: 22%;
+            margin: 1% 3% 1% 0;
+            height: 1.2rem;
+            position: relative;
+            border-radius: 0.1rem;
+            background: $MpageBG;
+            border: 1px solid $MpageBG;
+            text-align: center;
+            &:nth-of-type(4n){
+                margin: 1% 0;
+            }
+            &.active{
+                border: 1px solid $boxBG;
+                .checkIcon{
+                    width: .35rem;
+                    height: .35rem;
+                    display: block;
+                    position: absolute;
+                    top:0;
+                    right: 0;
+                    background: $boxBG;
+                    font-size: 0.05rem;            
+                    background: $boxBG url("./images/checkIcon.png") 0 0 / cover
+                }
+            }
+            &.recommend,&.iscounted{
+                .recommendImg{
+                    width: .75rem;
+                    height: .75rem;
+                    position: absolute;
+                    top:0;
+                    right: 0;
+                }
+            }
+            &.iscounted .recommendImg{
+                background: url("./images/discounted.png") 0 0 / cover;
+            }
+            & .recommendImg{
+                background: url("./images/recommend.png") 0 0 / cover ;
+            }
+            img{
+                display: inline-block;
+                margin: 0.2rem auto 0;
+                width: .5rem;
+                height: .5rem;   
+            }
+            .text{
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: .2rem;
+                height: .3rem;
+                line-height: .3rem;
+                margin-top: -0.05rem;   
+            }
+            .otherPay{
+                width: .5rem;
+                height: .5rem;
+                margin: 0.2rem auto 0;
+                display: inline-block;
+                background: url("./images/otherPay.png") 0 0 / cover ;
+                height: .5rem;
+                width: .5rem;
+                margin: .2rem auto .1rem;
+            }
+        }
+
+        // 选择通道
+        //.payMethodValue{
+            //三方支付
+            .QrcodeDeposit{
+                z-index: 999;
+                position: fixed;
+                -webkit-animation-duration: .5s;
+                animation-duration: .5s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                .dom{
+                    height: auto;
+                    .title a{
+                        position: absolute;
+                        right: 15px;
+                        top: 0;
+                        font-size: .25rem;
+                    }
+                    i{
+                        font-size: .3rem;
+                        position: absolute;
+                        left: .15rem;
+                        top: 0;
+                    }
+                }
+                .con{
+                    padding: 0 .5rem .5rem;
+                    display: flex;
+                    font-size: .275rem;
+                    .text{
+                        flex: 1;
+                        padding-top: 20px;
+                        line-height: .4rem;
+                        text-align: left;
+                        color: #333;
+                    }
+                }
+            }
+            .pickBanks{
+                .am-list-item.am-list-item-middle{
+                    padding: 0;
+                    height: 1rem;
+                    .am-list-line{
+                        background: $MpageBG;
+                        border-radius: .15rem;
+                        .am-list-extra{
+                            flex-basis: 100%;
+                            color: $text2;
+                            .payChannel{
+                                font-size: .275rem;
+                            }
+                        }
+                    }
+                }
+            }
+            // 支付
+            .offinepay,.onlinePay{
+                .depositMoney{
+                    padding: 0;
+                    .am-list-line{
+                        background: $MpageBG;
+                        border-radius: .15rem;
+                        .am-input-label-5{
+                            color: $text2;
+                            width: .75rem;
+                            font-size: 0.5rem;
+                        }
+                        .am-input-control{
+                            input{
+                                color: $text;
+                                font-size: .25rem;
+                            }
+                        }
+                    }
+                }
+                .quick-amount{
+                    margin: .3rem 0 .2rem 0;
+                    .inline{
+                        text-align: center;
+                        height: .6rem;
+                        line-height: .6rem;
+                        background: $MpageBG;
+                        border-radius: .1rem;
+                        margin: .1rem .05rem;
+                        color: $boxBG;
+                        width: 18%;
+                        font-size: .28rem;
+                        border: solid 1px $boxBG;
+                        &.active{
+                            background-color: $boxBG;
+                            color: #fff;
+                        }
+                        &.disable{
+                            background-color:$disableBG;
+                            color: $disableColor;
+                            border-color: $disableBorder;
+                        }
+                    }
+                }
+            }
+        //}
+    }
+    .btn{
+        &.disabled{
+            background: #bbb;
+        }
+    }
+    .reminderTxt {
+        display: block;
+        min-height: .1rem;
+        margin: .3rem 5%;
+        font-size: .275rem;
+    }
+    // 银行转账
+    .atmbox{
+        z-index: 5;
+        position: fixed;
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        -webkit-overflow-scroll:touch;
+        .dom{
+            .overflow{
+                h3{
+                    line-height: .75rem;
+                    font-size: .3rem;
+                    text-align: center;
+                    color: $text;
+                }
+                .con{
+                    padding: 0 .2rem;
+                    .am-list {
+                        .am-list-body {
+                            background: none;
+                            &::before{
+                                background: none;
+                            }
+                            &::after{
+                                background: none;
+                            }
+                        }
+                    }
+                    .am-list-item .am-input-label.am-input-label-5{
+                        color:$myPageSizeColor;
+                        width: 1.25rem;
+                        font-size: .275rem;
+                    }
+                    .am-list-extra,.am-list-item .am-input-control input{
+                        color: $myPageSizeColor;
+                        font-size: .275rem; 
+                    }
+                    .qrcode img{
+                        max-height: 160px;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                    .text{
+                        margin: 10px;
+                        line-height: 24px;
+                        color: #a9493a;
+                        font-size: .275rem;
+                    }
+                    .UserBankInfo{
+                        .am-list-body .am-list-item{
+                            height: .7rem;
+                            padding-left: .2rem;   
+                            .am-input-control{
+                                margin-left: .1rem;
+                                input{
+                                    width: 75%;
+                                    font-size: .275rem;
+                                }
+                            }
+                            button{ // 复制按钮
+                                float: right;
+                                height: .5rem;
+                                border: none;
+                                color: #fff;
+                                text-align: center;
+                                padding: .1rem .2rem;
+                                display: block;
+                                outline: 0 none;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                word-break: break-word;
+                                white-space: nowrap;
+                                border-radius: 5px;
+                                background-color: $boxBG;
+                                font-size: .2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .warning{
+        color: $warning;
+        width: 100%;
+        text-align: center;
+        font-size: .28rem;
+        margin: .3rem auto;
+    }
+
+    @media only screen and (min-device-width: 768px){ //IPAD
+        .am-list-item .am-list-line .am-list-extra,
+        .am-list-item.am-input-item,
+        .am-input-control input{
+            line-height: .6rem;
+            height: .6rem;
+            font-size: .275rem;
+        }
+        .am-list-item .am-input-label.am-input-label-5{
+            height: .75rem;
+            line-height: .7rem;
+        }
+    }  
+    @media only screen and (max-device-width: 321px){ // iphone5 ScreenWidth<321
+        .am-list-item,.am-list-item.am-input-item{
+            min-height: .88rem;
+            height: .88rem;
+        }
+    }
+
+    .am-list-item{
+        background: $MpageBG;
+    }
+
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx){
+    html:not([data-scale]) .MoneyPage .am-list-item:not(:last-child) .am-list-line:after {
+        background-color:transparent;
+    }
+}
+@media only screen and (min-device-width: 768px){
+    .am-picker-col{ // Picker
+        height: 25vh;
+    }   
+    .am-picker-popup-item{
+        font-size: .275rem;
+        height: .6rem;
+    }
+}

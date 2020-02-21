@@ -1,0 +1,109 @@
+.MyMessage {
+    background: $root !important;
+    height: 100%;
+    .scroll-content{
+        padding: 0 .3rem;
+        overflow: auto;
+        height: calc(100% - 2rem);
+        margin-top: 1rem;
+    }
+    .am-tabs{
+        position: fixed;
+        top: 1rem;
+        height: calc(100% - 2.1rem);
+    }
+    .content{
+        background: $MpageBG;
+        padding: .1rem .3rem;
+    }
+    small{
+        font-size: .235rem;
+        display: block;
+        text-align: right;
+    }
+    .am-tabs-default-bar-tab{
+        color: $messageNavColor;
+        background: $MpageBG;
+        font-size: .25rem;
+        line-height: .6rem;
+        height: .6rem;
+        padding: 0 0 8px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        &::after{
+            background: none !important;
+        }
+    }
+    .promoImg{
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: .4rem;
+    }
+    .txt{
+        display: inline-block;
+        margin-left: .2rem;
+        width: 70%;
+        font-size: .25rem;
+        overflow: hidden;
+        vertical-align: middle;
+        text-overflow: ellipsis;
+        white-space: nowrap;                   
+    }
+    .myListView {
+        height: 100%; 
+    }
+    .am-list-footer{
+        height: 2rem;
+    }
+    .am-list-view-scrollview-content.am-list{
+        right: 0;
+        left: 0;
+    }
+    .ReadMessage{
+        .messageCon{
+            padding: .2rem .2rem 0;
+        }
+    }
+    .am-list-body{
+        background: none;
+        &::before{
+            background: none !important;
+        }
+        &::after{
+            background: none !important;
+        }
+    }
+    .am-tabs-default-bar-nextpage,.am-tabs-default-bar-prevpage{
+        background: none;
+    }
+    .am-list-item{
+        padding-left: 0;
+        margin: 10px 0;
+    }
+    .am-list-item .am-list-line{
+        padding-right: 0;
+        &::after{
+            background: none !important;
+        }
+    }
+    .am-list-item .am-list-line .am-list-content{
+        padding-bottom: .2rem 0;
+        padding-top: 0;
+        background: $MpageBG;
+        color: $text1 !important;
+        .am-badge{
+            z-index: 5;
+        }
+    }
+    .am-tabs-default-bar-content{
+        background: $MpageBG;
+    }
+    .am-tabs-default-bar-tab-active{
+        color: $boxBG;
+    }
+    .am-tabs-default-bar-underline{
+        border-color: $boxBG;
+    }
+}

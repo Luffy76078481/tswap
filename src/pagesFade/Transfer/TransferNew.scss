@@ -1,0 +1,248 @@
+.transfer_page {
+    width: 100%;
+    background: $body;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    span.loading {
+        font-size: .225rem;
+
+        svg {
+            width: .2rem;
+            height: .2rem;
+        }
+    }
+
+    .scroll-content {
+        overflow-y: auto;
+        height: calc(100% - 1rem);
+
+        .wrap {
+            li {
+                flex: 1;
+                flex-direction: column;
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    box-shadow: inset -1px 0px 0 rgba(255, 255, 250, 0.3),
+                        inset -2px 0px 0 rgba(0, 0, 0, 0.1);
+                }
+
+                button {
+                    line-height: .45rem;
+                    font-size: .25rem;
+                    background: $btnBG;
+                    color: $btnColor;
+                    border-radius: 5px;
+                    width: 1.5rem;
+                }
+            }
+        }
+
+        // 游戏
+        .wrap,
+        .games {
+            box-sizing: border-box;
+            padding: 0 .2rem;
+            margin: .2rem .2rem 0 .2rem;
+            border-radius: .1rem;
+            box-shadow: $box-shadow;
+            background-color: $MpageBG;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    margin: .3rem 0;
+                    box-sizing: border-box;
+                    align-items: center;
+    
+                    display: flex;
+
+                    span {
+                        line-height: .3rem;
+                    }
+
+                    span.tlt {
+                        font-size: .25rem;
+                        font-weight: 500;
+                        color: $messageNavColor;
+                    }
+
+                    span.money {
+                        font-size: .225rem;
+                        color: $warningtest;
+                    }
+                }
+            }
+        }
+
+        .games ul li {
+            width: 100%;
+            box-shadow: inset 0px -1px 0 rgba(255, 255, 250, 0.3), inset 0px -2px 0 rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: .1rem 0 0 0;
+            padding: .2rem 0;
+
+            &:last-child {
+                box-shadow: none;
+            }
+
+            div {
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .autoTransfer {
+            margin: .4rem .2rem;
+            padding: .3rem;
+            border-radius: .1rem;
+            box-shadow: $box-shadow;
+            background-color: $MpageBG;
+            color: $text;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: .275rem;
+
+            span {
+                line-height: .5rem;
+            }
+
+            b {
+                margin-right: .05rem;
+            }
+
+            .am-switch input[type="checkbox"]:checked+.checkbox {
+                background-color: $boxBG;
+            }
+
+            @media only screen and (min-device-width: 768px) {
+
+                // 自动转账按钮
+                .am-switch .checkbox {
+                    width: .85rem;
+                    height: .51rem;
+                    border-radius: .5rem;
+                }
+
+                .am-switch .checkbox:after {
+                    height: .45rem;
+                    width: .45rem;
+                    top: .03rem;
+                }
+
+                .am-switch input[type="checkbox"]:checked+.checkbox:after {
+                    transform: translateX(.35rem);
+                }
+            }
+        }
+    }
+}
+
+
+// 转账内页
+.am-list-item {
+    min-height: .8rem;
+
+    .am-list-line {
+        .am-input-label.am-input-label-5 {
+            width: 1.7rem;
+        }
+
+        .am-list-extra {
+            font-size: .3rem;
+
+            .am-switch input[type="checkbox"]:checked+.checkbox:after {
+                transform: translateX(.4rem);
+            }
+
+            .checkbox {
+                width: 1.05rem;
+                height: .68rem;
+                border-radius: .6rem
+            }
+
+            .checkbox::before,
+            ::after {
+                top: .03rem;
+                left: .03rem;
+                width: 1rem;
+                height: .6rem;
+                border-radius: .6rem;
+            }
+
+            .checkbox::after {
+                width: .6rem;
+                height: .6rem;
+                border-radius: .6rem;
+            }
+
+        }
+
+        .am-input-control {
+            input {
+                font-size: .3rem;
+                color: $text;
+            }
+        }
+    }
+
+}
+
+.am-input-extra {
+    min-height: .5rem;
+
+    .allM {
+        font-size: .28rem;
+        background: $boxBG;
+        color: #fff;
+        border-radius: .1rem;
+        padding: .1rem 0.15rem;
+        display: inline-block;
+    }
+}
+
+// 游戏转账具体内容
+.transGame{
+    width: 100%;
+    background: $body;
+    height: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+
+.transferPage,.transGame{
+    // 不晓得Na个B改的
+    .am-list-item .am-list-line .am-list-content{
+        color: $text!important;
+        font-size: .28rem!important;
+    }  
+    // 自动转账按钮
+    .am-switch{
+        float: right;
+    }  
+    .am-switch input[type="checkbox"]:checked + .checkbox{
+        background: $boxBG;
+    }
+    .am-list-item .am-input-label.am-input-label-5{
+        font-size: .275rem;
+    }
+    .am-list-item{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .am-list-body{
+        background: $contentBG;
+        .am-input-label{
+            color: $text;
+        }
+    }
+}
